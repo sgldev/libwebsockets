@@ -163,8 +163,8 @@ delete_from_fd(const struct lws_context *context, int fd);
  * Mac OSX as well as iOS do not define the MSG_NOSIGNAL flag,
  * but happily have something equivalent in the SO_NOSIGPIPE flag.
  */
-#ifdef __APPLE__ && !defined(MSG_NOSIGNAL)
-#define MSG_NOSIGNAL SO_NOSIGPIPE
+#ifdef __APPLE__
+//#define MSG_NOSIGNAL SO_NOSIGPIPE
 #endif
 
 /*
